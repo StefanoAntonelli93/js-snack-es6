@@ -38,7 +38,7 @@ const bikes = [
 ];
 
 
-
+// creo una variabile di partenza (biciLeggera)
 let biciLeggera = bikes[0];
 console.log(biciLeggera);
 
