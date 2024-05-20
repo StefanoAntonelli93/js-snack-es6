@@ -2,7 +2,7 @@
 console.log('ok');
 
 
-const bike = [
+const bikes = [
     {
         nome: 'Specialized',
         peso: 3000,
@@ -38,8 +38,28 @@ const bike = [
 ];
 
 
-// arrow function forEach
-const result = bike.forEach((element, i, array) => {
-    console.log(element, i, array);
-});
 
+let biciLeggera = bikes[0];
+console.log(biciLeggera);
+
+
+// arrow function forEach
+const result = bikes.forEach((bike, i, array) => {
+    console.log(bike, i, array);
+    const biciAttuale = bikes[i];
+    if (biciAttuale.peso < biciLeggera.peso) {
+        biciLeggera = biciAttuale;
+    }
+});
+console.log(`La bici più leggera è: ${biciLeggera.nome}`);
+
+
+
+// come accedere a un elemento specifico di un oggetto dentro array
+// console.log(bike[1].peso);
+
+
+// for of
+// for ( let nome of bike) {
+//     console.log(nome);
+// }
